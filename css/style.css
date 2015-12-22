@@ -42,11 +42,10 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
-/* –––––––––––––––––– Banner - media queries –––––––––––––––––– */
-/* Note: order from smallest to largest screen size in order for correct properties to be
-   overriden. */
+/* Note: order media queries from smallest to largest screen size in order for correct properties
+   to be overridden. */
 
-/* Banner - tablets */
+/* Tablets */
 @media only screen and (max-width: 950px) {
   #banner {
     background-size: 120%;
@@ -57,7 +56,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* –––––––––––––––––– Banner - larger mobile phones –––––––––––––––––– */
+/* Larger mobile phones */
 @media only screen and (max-width: 480px) {
   #banner {
     background:
@@ -75,7 +74,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* –––––––––––––––––– Banner - smaller mobile phones (iPhone 4S) –––––––––––––––––– */
+/* Smaller mobile phones (iPhone 4S, 5) */
 @media only screen and (max-width: 400px) {
   #banner {
     background:
@@ -93,8 +92,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* –––––––––––––––––– Banner text - mobile phones –––––––––––––––––– */
-/* iPhone 6 */
+/* Banner text - mobile phones (iPhone 6) */
 @media only screen and (max-width: 450px) {
   #banner h1 {
     font-size: 3.7em;
@@ -121,11 +119,48 @@ h1, h2, h3, h4, h5 {
   width: 100%;
 }
 
+/* ––––––––––– Pin Feedback Demo GIF CSS ––––––––––– */
+
 .demo {
   display: block;
-  height: 100%;
-  width: 100%;
+  width: 140%;
 }
+
+@media only screen and (max-width: 1100px) {
+  .demo {
+    width: 150%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .demo {
+    margin-left: -2em;
+    width: 160%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .demo {
+    margin-left: -4.3em;
+    width: 220%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .demo {
+  /* full iphone */
+    margin-left: -1.5em;
+    padding-bottom: 1em;
+    width: 90%;
+  }
+
+  .projects .page-img {
+    padding-bottom: 1em;
+    width: 40%;
+  }
+}
+
+/* ––––––––––– End Pin Feedback Demo GIF CSS ––––––––––– */
 
 .femmes h5 {
   margin-bottom: 0em;
