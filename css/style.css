@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Larger mobile phones */
+
 @media only screen and (max-width: 480px) {
   #banner {
     background:
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5 {
          ),
          url('../img/oculus_tall.png');
     background-size: 100%;
-    padding: 10% 0;
+    padding: 18% 0;
   }
 
   #banner h1 {
@@ -83,14 +84,16 @@ h1, h2, h3, h4, h5 {
             rgba(0, 0, 0, 0.6)
           ),
           url('../img/oculus_tall.png');
-    background-size: 120%;
-    padding: 10% 0;
+    background-size: 100%;
+    padding: 15% 0;
   }
 
   #banner h1 {
     font-size: 4.5em;
   }
 }
+
+/* ----Banner text font size media queries---- */
 
 /* Banner text - mobile phones (iPhone 6) */
 @media only screen and (max-width: 450px) {

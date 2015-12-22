@@ -178,10 +178,14 @@
 
   <script type="text/javascript" src="js/skrollr.min.js"></script>
   <script type="text/javascript">
-    skrollr.init({
-      smoothScrolling: true
-    });
 
+    /* Disable parallax on mobile. */
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    } else {
+      skrollr.init({
+        smoothScrolling: true
+      });
+    }
 
   </script>
 </div>
