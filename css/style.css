@@ -1,0 +1,146 @@
+/*   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     Copyright © 2016, Alice Chang
+     All rights reserved
+     The following code and content is for use by Alice Chang only.
+     –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––  */
+
+html {
+  height: 100%;
+}
+
+#skrollr-body {
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* –––––––––––––––––– Banner CSS –––––––––––––––––– */
+
+/* Banner - desktop screen (default) */
+#banner {
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)
+      ),
+      url('../img/oculus.png');
+  background-size: 100%;
+  color: white;
+  padding: 14% 0;
+  text-align: center;
+}
+
+#banner h1 {
+  font-size: 6em;
+  line-height: 1em;
+  margin-bottom: .8em;
+  text-align: center;
+}
+
+/* –––––––––––––––––– Banner - media queries –––––––––––––––––– */
+/* Note: order from smallest to largest screen size in order for correct properties to be
+   overriden. */
+
+/* Banner - tablets */
+@media only screen and (max-width: 950px) {
+  #banner {
+    background-size: 120%;
+  }
+
+  #banner h1 {
+    font-size: 4.5em;
+  }
+}
+
+/* –––––––––––––––––– Banner - larger mobile phones –––––––––––––––––– */
+@media only screen and (max-width: 480px) {
+  #banner {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+         ),
+         url('../img/oculus_tall.png');
+    background-size: 100%;
+    padding: 10% 0;
+  }
+
+  #banner h1 {
+    font-size: 4.5em;
+  }
+}
+
+/* –––––––––––––––––– Banner - smaller mobile phones (iPhone 4S) –––––––––––––––––– */
+@media only screen and (max-width: 400px) {
+  #banner {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url('../img/oculus_tall.png');
+    background-size: 120%;
+    padding: 10% 0;
+  }
+
+  #banner h1 {
+    font-size: 4.5em;
+  }
+}
+
+/* –––––––––––––––––– Banner text - mobile phones –––––––––––––––––– */
+/* iPhone 6 */
+@media only screen and (max-width: 450px) {
+  #banner h1 {
+    font-size: 3.7em;
+  }
+}
+
+/* iPhone 4S, 5 */
+@media only screen and (max-width: 350px) {
+  #banner h1 {
+    font-size: 3.2em;
+  }
+}
+
+/* –––––––––––––––––– End banner CSS –––––––––––––––––– */
+
+.page-section {
+  padding: 4rem 0;
+  margin-bottom: 0;
+}
+
+.page-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.demo {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.femmes h5 {
+  margin-bottom: 0em;
+}
+
+.project-icon {
+  border-radius: 25px;
+  float: left;
+  height: 11em;
+  margin-right: 1em;
+  width: 11em;
+}
+
+.copyright {
+  color: #777;
+  font-size: 14px;
+  text-align: center;
+}
