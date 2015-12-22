@@ -124,6 +124,7 @@ h1, h2, h3, h4, h5 {
 .demo {
   content:url('../img/pinfeedback-iphone-cropped.gif');
   display: block;
+  margin-left: -2.5em;
   width: 140%;
 }
 
@@ -131,31 +132,29 @@ h1, h2, h3, h4, h5 {
   .demo {
     /* Any device wider than 1100px will see the full iPhone GIF; anything narrower will see the
     cropped GIF */
-    content:url('../img/pinfeedback-iphone-thin.gif');
+    content:url('../img/pinfeedback-iphone-full.gif');
     width: 150%;
   }
 }
 
 @media only screen and (max-width: 900px) {
   .demo {
-    margin-left: -2em;
     width: 160%;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .demo {
-    margin-left: -4.3em;
-    width: 220%;
+    width: 185%;
   }
 }
 
 /* Note to self::: 550px is the point at which the page becomes vertically stacked. */
 @media only screen and (max-width: 550px) {
   .demo {
-    margin-left: -1.5em;
+    margin-left: .5em;
     padding-bottom: 1em;
-    width: 90%;
+    width: 52%;
   }
 
   .projects .page-img {
