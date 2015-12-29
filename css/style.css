@@ -13,7 +13,13 @@ html {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h1 {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2, h3, h4, h5 {
   font-family: 'PT Serif', serif;
   font-weight: 700;
   text-align: left;
