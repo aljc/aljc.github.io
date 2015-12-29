@@ -52,7 +52,7 @@ h2, h3, h4, h5 {
    to be overridden. */
 
 /* Tablets */
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1000px) {
   #banner {
     background-size: 120%;
   }
@@ -63,7 +63,6 @@ h2, h3, h4, h5 {
 }
 
 /* Larger mobile phones */
-
 @media only screen and (max-width: 480px) {
   #banner {
     background:
