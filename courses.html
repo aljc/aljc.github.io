@@ -189,6 +189,20 @@
   <script type="text/javascript" src="js/skrollr.min.js"></script>
   <script type="text/javascript">
 
+    /* Preload images. */
+    function preload(sources)
+    {
+      var images = [];
+      for (i = 0, length = sources.length; i < length; ++i) {
+        images[i] = new Image();
+        images[i].src = sources[i];
+      }
+    }
+
+    preload([
+      'img/oculus.png'
+    ]);
+
     /* Disable parallax on mobile. */
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     } else {
