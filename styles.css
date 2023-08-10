@@ -171,7 +171,7 @@ th {
 }
 
 td {
-    background-color: var(--primary-bg);
+    background-color: #fefefe;
     color: var(--text-color);
 }
 
@@ -188,25 +188,6 @@ td a:hover {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-/* Back to Top Button */
-#back-to-top {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 1000;
-    background-color: var(--accent-color);
-    color: var(--primary-bg);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-#back-to-top:hover {
-    background-color: var(--secondary-accent);
 }
 
 /* Consistent hover effects */
