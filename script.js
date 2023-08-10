@@ -1,3 +1,23 @@
+
+// Typewriter effect for the main title
+const textElement = document.querySelector("main header h1");
+const fullText = textElement.textContent;
+const stopText = "Hi, I'm Alice.";
+textElement.textContent = 'H';
+
+let index = 1;
+
+function typeText() {
+    if (index < stopText.length) {
+        textElement.textContent += fullText[index];
+        index++;
+        setTimeout(typeText, 100); // Speed of typing
+    }
+}
+
+// Initiate the typing effect after a delay
+setTimeout(typeText, 100);
+
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -43,25 +63,6 @@ btn.onclick = function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-// Typewriter effect for the main title
-const textElement = document.querySelector("main header h1");
-const fullText = textElement.textContent;
-const stopText = "Hi, I'm Alice.";
-textElement.textContent = '';
-
-let index = 0;
-
-function typeText() {
-    if (textElement.textContent !== stopText) {
-        textElement.textContent += fullText[index];
-        index++;
-        setTimeout(typeText, 100); // Speed of typing
-    }
-}
-
-// Initiate the typing effect after a delay
-setTimeout(typeText, 1000);
 
 // Adjust scroll position for sticky header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

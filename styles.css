@@ -77,7 +77,7 @@ header h1 {
     white-space: nowrap;
     border-right: .15em solid #5E503F;  /* dark taupe */
     font-weight: 300;
-    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+    animation: blink-caret .75s step-end infinite;
 }
 
 @keyframes blink-caret {
