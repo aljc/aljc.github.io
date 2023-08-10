@@ -1,0 +1,222 @@
+:root {
+    --primary-bg: #FAF3E0;
+    --accent-color: #FFB6B9;
+    --text-color: #5E503F;
+    --secondary-accent: #DAA520;
+}
+
+
+body {
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+p, li {
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: var(--primary-bg);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: #5E503F;  /* dark taupe */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav li a:hover, nav li a:focus {
+    color: var(--primary-bg);
+    background-color: var(--accent-color);
+}
+
+/* Offset for sticky header */
+section::before {
+    content: "";
+    display: block;
+    height: 60px; 
+    margin: -60px 0 0; /* The negative top margin pulls the section up to its original position */
+}
+
+header {
+    background-color: var(--primary-bg);
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #5E503F;  /* dark taupe */
+    font-weight: 300;
+    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #5E503F; }  /* dark taupe */
+}
+
+section {
+    padding: 20px;
+    flex: 1;
+}
+
+.project, .event {
+    border: 1px solid #DAA520;  /* golden */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fefefe;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+footer {
+    background-color: var(--primary-bg);
+    color: #5E503F;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav li {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/* Accordion styles */
+.accordion-button {
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    border: 1px solid var(--accent-color);
+}
+
+.accordion-button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+.panel {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+td {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+}
+
+td a {
+    color: var(--secondary-accent);
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Sticky Navigation Bar */
+#sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1000;
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#back-to-top:hover {
+    background-color: var(--secondary-accent);
+}
+
+/* Consistent hover effects */
+nav li a:hover, td a:hover {
+    text-decoration: underline;
+    color: var(--secondary-accent);
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
