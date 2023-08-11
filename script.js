@@ -63,18 +63,3 @@ btn.onclick = function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-// Adjust scroll position for sticky header
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        let target = document.querySelector(this.getAttribute('href'));
-        let headerHeight = document.getElementById('sticky-navbar').offsetHeight;
-
-        window.scrollTo({
-            top: target.offsetTop - headerHeight,
-            behavior: 'smooth'
-        });
-    });
-});

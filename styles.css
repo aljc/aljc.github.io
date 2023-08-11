@@ -186,13 +186,6 @@ td a:hover {
     text-decoration: underline;
 }
 
-/* Sticky Navigation Bar */
-#sticky-navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
 /* Consistent hover effects */
 nav li a:hover, td a:hover {
     text-decoration: underline;
