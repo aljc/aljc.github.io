@@ -109,14 +109,6 @@ header h1 {
     object-fit: contain;
 }
 
-/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center;
-    }
-}
-
 section {
     padding: 20px;
     flex: 1;
@@ -215,6 +207,13 @@ td a:hover {
 @media screen and (max-width: 768px) {
     table {
         font-size: 12px;
+    }
+    .about-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+    nav li a {
+        padding: 14px 6px;
     }
 }
 
