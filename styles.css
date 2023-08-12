@@ -113,6 +113,7 @@ header h1 {
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
     }
 }
 
@@ -122,17 +123,12 @@ section {
 }
 
 .project, .event {
+    font-size: 14px;
     border: 1px solid var(--border-color);
     padding: 10px;
     margin: 10px 0;
     background-color: #fefefe;
 }
-
-/* .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-} */
 
 footer {
     background-color: var(--primary-bg);
@@ -188,6 +184,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    font-size: 14px;
 }
 
 table, th, td {
@@ -212,6 +209,13 @@ td a {
 
 td a:hover {
     text-decoration: underline;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
 }
 
 @keyframes blink {
