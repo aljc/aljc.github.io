@@ -88,6 +88,24 @@ header h1 {
     50% { border-color: #5E503F; }  /* dark taupe */
 }
 
+/* Apply styles to the container holding the headshot and content */
+.about-container {
+    display: flex; /* Display items in a row */
+    align-items: center; /* Vertically align items */
+    gap: 20px; /* Gap between headshot and content */
+}
+
+/* Style for the headshot image */
+.about-container img {
+    max-width: 200px; /* Adjust the width as needed */
+    border-radius: 50%; /* Make the image circular */
+}
+
+/* Style for the about content */
+.about-content {
+    flex: 1; /* Allow content to take remaining space */
+}
+
 section {
     padding: 20px;
     flex: 1;
