@@ -19,7 +19,6 @@ body {
     max-width: 1200px;
     justify-content: center;
 }
-}
 
 h1, h2, h3 {
     margin-bottom: 20px;
@@ -46,6 +45,7 @@ nav li {
     float: left;
 }
 
+/* Nav bar items */
 nav li a {
     display: block;
     color: #5E503F;  /* dark taupe */
@@ -69,7 +69,6 @@ section::before {
 }
 
 header {
-    background-color: var(--primary-bg);
     padding: 60px 0;
     text-align: center;
 }
@@ -122,11 +121,11 @@ section {
     background-color: #fefefe;
 }
 
-.project:hover {
+/* .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-}
+} */
 
 footer {
     background-color: var(--primary-bg);
@@ -206,12 +205,6 @@ td a {
 
 td a:hover {
     text-decoration: underline;
-}
-
-/* Consistent hover effects */
-nav li a:hover, td a:hover {
-    text-decoration: underline;
-    color: var(--secondary-accent);
 }
 
 @keyframes blink {
