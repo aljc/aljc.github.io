@@ -90,22 +90,24 @@ header h1 {
     50% { border-color: #5E503F; }  /* dark taupe */
 }
 
-/* Apply styles to the container holding the headshot and content */
+/* For container holding the headshot and about */
 .about-container {
-    display: flex; /* Display items in a row */
-    align-items: center; /* Vertically align items */
-    gap: 20px; /* Gap between headshot and content */
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
 }
 
 /* Style for the headshot image */
 .about-container img {
-    max-width: 200px; /* Adjust the width as needed */
-    border-radius: 50%; /* Make the image circular */
+    max-width: 200px;
+    object-fit: contain;
 }
 
-/* Style for the about content */
-.about-content {
-    flex: 1; /* Allow content to take remaining space */
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
 }
 
 section {
