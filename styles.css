@@ -3,6 +3,7 @@
     --accent-color: #EEE0C9;
     --text-color: #5E503F;
     --secondary-accent: #ADC4CE;
+    --border-color: #5E503F;
 }
 
 
@@ -30,7 +31,6 @@ p, li {
 
 nav {
     background-color: var(--primary-bg);
-    border-bottom: 2px solid var(--secondary-accent);
 }
 
 
@@ -57,7 +57,7 @@ nav li a {
 
 nav li a:hover, nav li a:focus {
     color: var(--primary-bg);
-    background-color: var(--accent-color);
+    background-color: var(--border-color);
 }
 
 /* Offset for sticky header */
@@ -115,7 +115,7 @@ section {
 }
 
 .project, .event {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--border-color);
     padding: 10px;
     margin: 10px 0;
     background-color: #fefefe;
@@ -165,7 +165,7 @@ footer {
 }
 
 .accordion-button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--text-color);
     color: var(--primary-bg);
 }
 
