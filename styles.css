@@ -78,9 +78,11 @@ header h1 {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: .15em solid #5E503F;  /* dark taupe */
+    
     font-weight: 300;
-    animation: blink-caret .75s step-end infinite;
+    /* cursor animation */
+    /* border-right: .15em solid #5E503F; */
+    /* animation: blink-caret .75s step-end infinite; */
 }
 
 @keyframes blink-caret {
