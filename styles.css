@@ -161,7 +161,7 @@ footer {
     outline: none;
     font-size: 16px;
     transition: 0.4s;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--text-color);
 }
 
 .accordion-button:hover {
