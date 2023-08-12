@@ -115,7 +115,7 @@ section {
 }
 
 .project, .event {
-    border: 1px solid #DAA520;  /* golden */
+    border: 1px solid var(--accent-color);
     padding: 10px;
     margin: 10px 0;
     background-color: #fefefe;
@@ -149,7 +149,7 @@ footer {
 
 /* Accordion styles */
 .accordion-button {
-    font-family: 'Courier New', monospace;
+    font-family: 'Poppins', monospace;
     line-height: 1.6;
     background-color: var(--primary-bg);
     color: var(--text-color);
