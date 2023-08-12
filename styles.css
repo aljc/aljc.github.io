@@ -1,8 +1,8 @@
 :root {
     --primary-bg: #FAF3E0;
-    --accent-color: #FFB6B9;
+    --accent-color: #EEE0C9;
     --text-color: #5E503F;
-    --secondary-accent: #DAA520;
+    --secondary-accent: #ADC4CE;
 }
 
 
@@ -30,7 +30,7 @@ p, li {
 
 nav {
     background-color: var(--primary-bg);
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--secondary-accent);
 }
 
 
@@ -48,7 +48,7 @@ nav li {
 /* Nav bar items */
 nav li a {
     display: block;
-    color: #5E503F;  /* dark taupe */
+    color: #5E503F;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -191,7 +191,7 @@ table, th, td {
 
 th {
     background-color: var(--accent-color);
-    color: var(--primary-bg);
+    color: var(--text-color);
 }
 
 td {
