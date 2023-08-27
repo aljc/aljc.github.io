@@ -6,7 +6,6 @@
     --border-color: #5E503F;
 }
 
-
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -84,11 +83,7 @@ header h1 {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    
     font-weight: 300;
-    /* cursor animation */
-    /* border-right: .15em solid #5E503F; */
-    /* animation: blink-caret .75s step-end infinite; */
 }
 
 @keyframes blink-caret {
@@ -205,6 +200,10 @@ td a:hover {
 
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media screen and (max-width: 768px) {
+    body {
+        padding: 0px;
+    }
+
     table {
         font-size: 12px;
     }
@@ -214,6 +213,12 @@ td a:hover {
     }
     nav li a {
         padding: 14px 6px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    table {
+        overflow-x: auto;
     }
 }
 
