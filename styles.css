@@ -412,6 +412,7 @@ hr::after {
   .site {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     border: none;
   }
   
@@ -465,14 +466,11 @@ hr::after {
     max-width: none;
     width: 100%;
     border-right: none;
-    border-top: 1px solid var(--border);
   }
 
   .site-main {
     order: 2;
-  }
-
-  .site-main {
+    flex: 1;
     padding: 40px 24px;
   }
   
