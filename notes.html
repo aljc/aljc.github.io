@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Notes – Alice Chang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="site">
+      <aside class="site-sidebar">
+        <div class="site-sidebar-top">
+          <div class="site-title-wrap">
+            <div class="site-title">Alice Chang</div>
+          </div>
+          <p class="site-tagline">
+            Notes on technology and creativity.
+          </p>
+          <nav class="site-nav">
+            <a href="index.html" class="active">Notes</a>
+            <a href="about.html">About</a>
+          </nav>
+        </div>
+        <div class="site-sidebar-bottom">
+          <div class="footer-copyright">Alice Chang &copy; 2025</div>
+          <div class="footer-quote">The medium is the message.</div>
+        </div>
+      </aside>
+
+      <main class="site-main">
+        <div class="section-label">Notes</div>
+        
+        <article id="essay-content" class="essay-body">
+          <!-- Content will be loaded here -->
+          <p>Loading...</p>
+        </article>
+      </main>
+    </div>
+
+    <script>
+      async function loadPost() {
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('slug');
+        
+        if (!slug) {
+          window.location.href = 'index.html';
+          return;
+        }
+
+        try {
+          const response = await fetch(`posts/${slug}.md`);
+          if (!response.ok) throw new Error('Post not found');
+          
+          const text = await response.text();
+          const contentDiv = document.getElementById('essay-content');
+          
+          // Simple frontmatter-like extraction for title if needed, 
+          // or just parse the whole thing.
+          // For now, we'll just parse the whole markdown.
+          contentDiv.innerHTML = marked.parse(text);
+          
+          // Update page title based on the first h1
+          const h1 = contentDiv.querySelector('h1');
+          if (h1) {
+            document.title = `${h1.innerText} – Alice Chang`;
+          }
+          
+        } catch (e) {
+          console.error(e);
+          document.getElementById('essay-content').innerHTML = `
+            <div style="text-align: center; margin-top: 60px;">
+               <div style="font-size: 2rem; margin-bottom: 16px;">Page Not Found</div>
+               <p style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic;">The page you are looking for does not exist.</p>
+               <a href="index.html" style="display: inline-block; margin-top: 24px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; text-decoration: none; border-bottom: 1px solid var(--border);">Return Home</a>
+            </div>
+          `;
+        }
+      }
+
+      loadPost();
+    </script>
+  </body>
+</html>
+
