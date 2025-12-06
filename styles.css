@@ -423,6 +423,14 @@ hr::after {
     gap: 24px;
   }
 
+  .spine-list {
+    display: none;
+  }
+
+  .site-nav a::before {
+    display: none;
+  }
+
   .site-sidebar-bottom {
     align-items: center;
     text-align: center;
