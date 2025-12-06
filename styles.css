@@ -141,17 +141,6 @@ body {
   gap: 8px;
 }
 
-.site-nav a::before {
-  content: "—";
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.site-nav a:hover::before,
-.site-nav a.active::before {
-  opacity: 1;
-}
-
 .site-nav a:hover,
 .site-nav a.active {
   color: var(--text);
@@ -451,10 +440,6 @@ hr::after {
   }
 
   .spine-list {
-    display: none;
-  }
-
-  .site-nav a::before {
     display: none;
   }
 
