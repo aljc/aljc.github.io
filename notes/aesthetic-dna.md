@@ -15,7 +15,7 @@ This past spring, <a href="https://x.com/michlu2" target="_blank" rel="noopener 
 
 CLIP embeddings are powerful for first-order visual and semantic clustering, but they often miss the deeper conceptual bridges that connect ideas across domains. By augmenting CLIP embeddings with LLM-generated world knowledge, we were able to reveal deeper similarities rooted in shared cultural, aesthetic, and scientific lineages.
 
-This allowed us to traverse embedding spaces in new ways, finding connections like: Pollock paintings ↔ Tokyo streetwear ↔ Vaporwave
+This allowed us to traverse embedding spaces in new ways, finding connections like: Pollock paintings ↔ Tokyo streetwear ↔ Vaporwave.
 
 ## The Evolution of Taste
 
