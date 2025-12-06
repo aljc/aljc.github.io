@@ -25,15 +25,15 @@ The expertise is no longer housed in either of us. It emerges between us, in the
 
 ## The Friction of Value
 
-The central difficulty of modern engineering is no longer acquiring technical knowledge. The AI provides that breadth. The true scarcity is the human capacity to define and enforce value.
+The central difficulty of modern engineering is no longer acquiring technical knowledge. AI provides that breadth. The true scarcity is the human capacity to define and enforce value.
 
 AI is excellent at optimizing for technical metrics: speed, conciseness, or adherence to a defined pattern. But it is value-neutral. It has no concept of what is good for your team, your business, or your long-term maintainability. It doesn't know the unwritten rules of the world the code must inhabit.
 
-The most profound work the AI forces upon us is engaging with this friction of value:
+The most profound work AI forces upon us is engaging with this friction of value:
 
-- The AI can give me a dozen architectural options. I have to choose the one that aligns with my budget, my team’s skill level, and my company’s appetite for risk. I provide the judgment.
-- The AI can write code that is technically flawless. I have to ensure the abstraction is readable and aesthetically pleasing to the humans who will maintain it for the next five years. I provide the taste.
-- The AI will simply reflect its training data. I have to push back to ensure the system is aligned with ethical standards and legal constraints. I provide the accountability.
+- AI can give me a dozen architectural options. I have to choose the one that aligns with my budget, my team’s skill level, and my company’s appetite for risk. I provide the judgment.
+- AI can write code that is technically flawless. I have to ensure the abstraction is readable and aesthetically pleasing to the humans who will maintain it for the next five years. I provide the taste.
+- AI will simply reflect its training data. I have to push back to ensure the system is aligned with ethical standards and legal constraints. I provide the accountability.
 
 ## On Thinking with Machines
 
