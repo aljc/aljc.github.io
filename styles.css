@@ -39,6 +39,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
+  overflow-anchor: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Layout Shell */
@@ -398,6 +400,11 @@ hr::after {
 
 /* Responsive */
 @media (max-width: 900px) {
+  html,
+  body {
+    height: auto;
+  }
+
   .site {
     display: flex;
     flex-direction: column;
