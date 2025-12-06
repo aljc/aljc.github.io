@@ -2,7 +2,7 @@
 
 # On Thinking With Machines
 
-<span class="dropcap">I</span>’ve spent the last week in Paris, reading in the evenings and tinkering with a few side projects during the day. I didn't intend for the two activities to intersect, but at some point, the combination of distance, philosophy, and practical engineering began informing the same core question: What does it mean to be responsible for the creation of software today?
+<span class="dropcap">I</span>’ve spent the last week in Paris, reading Sartre in the evenings and tinkering with a few side projects during the day. I didn't intend for the two activities to intersect, but at some point, the combination of distance, philosophy, and practical engineering began informing the same core question: What does it mean to be responsible for the creation of software today?
 
 ## When the Hierarchy Breaks
 

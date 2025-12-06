@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <title>Notes – Alice Chang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
@@ -43,15 +45,20 @@
     </div>
 
     <script>
-      async function loadPost() {
-        const params = new URLSearchParams(window.location.search);
-        const slug = params.get('slug');
+      async function loadPost(slugArg) {
+        // 1. Determine the slug to load
+        let slug = slugArg;
+        if (!slug) {
+          const params = new URLSearchParams(window.location.search);
+          slug = params.get('slug');
+        }
         
         if (!slug) {
           window.location.href = 'index.html';
           return;
         }
 
+        // 2. Fetch and render content
         try {
           const response = await fetch(`posts/${slug}.md`);
           if (!response.ok) throw new Error('Post not found');
@@ -59,9 +66,6 @@
           const text = await response.text();
           const contentDiv = document.getElementById('essay-content');
           
-          // Simple frontmatter-like extraction for title if needed, 
-          // or just parse the whole thing.
-          // For now, we'll just parse the whole markdown.
           contentDiv.innerHTML = marked.parse(text);
           
           // Update page title based on the first h1
@@ -69,14 +73,9 @@
           if (h1) {
             document.title = `${h1.innerText} – Alice Chang`;
           }
-          
-          // Highlight current spine item
-          const spineLinks = document.querySelectorAll('.spine-list a');
-          spineLinks.forEach(link => {
-            if (link.getAttribute('data-slug') === slug) {
-              link.classList.add('active');
-            }
-          });
+
+          // 3. Update sidebar active state
+          updateActiveSpine(slug);
           
         } catch (e) {
           console.error(e);
@@ -90,7 +89,44 @@
         }
       }
 
+      function updateActiveSpine(slug) {
+        const spineLinks = document.querySelectorAll('.spine-list a');
+        spineLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('data-slug') === slug) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      // Initialize
       loadPost();
+
+      // Setup SPA navigation for spine links
+      document.addEventListener('DOMContentLoaded', () => {
+        const spineLinks = document.querySelectorAll('.spine-list a');
+        spineLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const slug = link.getAttribute('data-slug');
+            const href = link.getAttribute('href');
+            
+            // Update URL without reload
+            history.pushState({ slug }, '', href);
+            
+            // Load new content
+            loadPost(slug);
+            
+            // Scroll to top of main content
+            window.scrollTo(0, 0);
+          });
+        });
+      });
+
+      // Handle back/forward buttons
+      window.addEventListener('popstate', (e) => {
+        loadPost();
+      });
     </script>
   </body>
 </html>
