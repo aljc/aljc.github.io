@@ -19,10 +19,6 @@
           </p>
           <nav class="site-nav">
             <a href="index.html" class="active">Notes</a>
-            <div class="spine-list">
-              <a href="notes.html?slug=thinking-with-machines" data-slug="thinking-with-machines">On Thinking With Machines</a>
-              <a href="notes.html?slug=prism" data-slug="prism">Prism: Mapping Aesthetic DNA</a>
-            </div>
             <a href="about.html">About</a>
           </nav>
         </div>
@@ -35,7 +31,7 @@
       <main class="site-main">
         <div class="section-label">Notes</div>
         
-        <article id="essay-content" class="essay-body">
+        <article id="note-content" class="note-body">
           <!-- Content will be loaded here -->
           <p>Loading...</p>
         </article>
@@ -57,7 +53,7 @@
           if (!response.ok) throw new Error('Post not found');
           
           const text = await response.text();
-          const contentDiv = document.getElementById('essay-content');
+          const contentDiv = document.getElementById('note-content');
           
           // Simple frontmatter-like extraction for title if needed, 
           // or just parse the whole thing.
@@ -70,17 +66,9 @@
             document.title = `${h1.innerText} – Alice Chang`;
           }
           
-          // Highlight current spine item
-          const spineLinks = document.querySelectorAll('.spine-list a');
-          spineLinks.forEach(link => {
-            if (link.getAttribute('data-slug') === slug) {
-              link.classList.add('active');
-            }
-          });
-          
         } catch (e) {
           console.error(e);
-          document.getElementById('essay-content').innerHTML = `
+          document.getElementById('note-content').innerHTML = `
             <div style="text-align: center; margin-top: 60px;">
                <div style="font-size: 2rem; margin-bottom: 16px;">Page Not Found</div>
                <p style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic;">The page you are looking for does not exist.</p>
