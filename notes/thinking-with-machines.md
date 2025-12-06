@@ -42,3 +42,9 @@ What should our systems look like if we take this new form of symbiosis seriousl
 If the human is no longer the sole expert, and the machine is no longer the mere executor, then developer tools should stop framing themselves around mastery and start framing themselves around dialogue.
 
 The future of engineering will not belong to the top 10 percent of developers in the old sense. It will belong to people who can articulate intent, who can interrogate the machine’s suggestions, who can synthesize competing possibilities into coherent judgment.
+
+Ultimately, this means competence is defined by those who are good at thinking with systems, not commanding them.
+
+Licklider dreamed of a symbiotic world that was deferential and one-directional, one where humans decide, machines execute. The one that is emerging now is more fluid, more disorienting, and far more demanding.
+
+We are not just supervising our tools. We are learning to think alongside them.
