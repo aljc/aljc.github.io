@@ -60,7 +60,7 @@
 
         // 2. Fetch and render content
         try {
-          const response = await fetch(`posts/${slug}.md`);
+          const response = await fetch(`notes/${slug}.md`);
           if (!response.ok) throw new Error('Post not found');
           
           const text = await response.text();
