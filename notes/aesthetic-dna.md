@@ -4,7 +4,7 @@
 
 <span class="dropcap">L</span>ately I’ve been reflecting on how inspiration moves through the world - not just visually, but through deeper historical and cultural threads. Why does brutalist architecture evoke a similar stripped-down and industrial feeling as certain techno tracks? Or surrealist art as avant-garde fashion?
 
-This past spring, <a href="https://x.com/michlu2" target="_blank" rel="noopener noreferrer">Michelle</a> and I built a prototype called **Prism** at the Exa/Anthropic hackathon (where we placed second!) to explore these cross-domain connections. We experimented with surfacing "aesthetic DNA" to reveal serendipitous links across art, fashion, design, and research.
+This past spring, <a href="https://x.com/michlu2" target="_blank" rel="noopener noreferrer">Michelle</a> and I built a prototype called <a href="https://prism.zip/" target="_blank" rel="noopener noreferrer">**Prism**</a> at the Exa/Anthropic hackathon (where we placed second!) to explore these cross-domain connections. We experimented with surfacing "aesthetic DNA" to reveal serendipitous links across art, fashion, design, and research.
 
 <video controls autoplay loop muted playsinline>
   <source src="../assets/prism-demo.mp4" type="video/mp4">
