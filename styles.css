@@ -193,11 +193,22 @@ body {
 .essay-list {
   display: flex;
   flex-direction: column;
-  gap: 48px;
 }
 
 .essay-list-item {
   position: relative;
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+  transition: opacity 0.2s ease;
+}
+
+.essay-list-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.essay-list-item:hover {
+  opacity: 0.8;
 }
 
 .essay-list-item a {
@@ -292,6 +303,14 @@ body {
   padding-top: 4px;
   font-weight: 400;
   color: var(--text);
+}
+
+.about-body .intro-paragraph {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  font-family: var(--font-serif);
 }
 
 /* Links in body */
@@ -423,4 +442,14 @@ hr::after {
   left: -20px;
   color: var(--text-light);
   font-size: 0.9em;
+}
+
+/* Media embeds */
+.essay-body video,
+.essay-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 32px 0;
+  display: block;
 }
