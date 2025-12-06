@@ -6,7 +6,7 @@
 
 This past spring, <a href="https://x.com/michlu2" target="_blank" rel="noopener noreferrer">Michelle</a> and I built a prototype called <a href="https://prism.zip/" target="_blank" rel="noopener noreferrer">**Prism**</a> at the Exa/Anthropic hackathon (where we placed second!) to explore these cross-domain connections. We experimented with surfacing "aesthetic DNA" to reveal serendipitous links across art, fashion, design, and research.
 
-<video controls autoplay loop muted playsinline>
+<video controls autoplay loop muted playsinline style="width: 100%; max-width: 800px; height: auto;">
   <source src="../assets/prism-demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
