@@ -107,6 +107,7 @@ body {
   padding: 0 8px;
   font-size: 14px;
   color: var(--text-light);
+  pointer-events: none; /* Allow clicks to pass through the star */
 }
 
 .site-title {
