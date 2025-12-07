@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- AUTO-GENERATED from notes/{{active_slug}}.md - DO NOT EDIT DIRECTLY -->
+<!-- Run 'python3 build.py' to regenerate this file -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{title}} – Alice Chang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aljc.github.io/notes/{{active_slug}}.html" />
+    <meta property="og:site_name" content="Alice Chang" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{title}}" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <aside class="site-sidebar">
+        <div class="site-sidebar-top">
+          <div class="site-title-wrap">
+            <a href="../about.html" style="text-decoration: none; color: inherit;">
+              <div class="site-title">Alice Chang</div>
+            </a>
+          </div>
+          <p class="site-tagline">
+            Musings on technology, craft, and creativity.
+          </p>
+          <nav class="site-nav">
+            <a href="../index.html" class="active">Notes</a>
+            <div class="spine-list">
+              <a href="thinking-with-machines.html">On Thinking With Machines</a>
+              <a href="aesthetic-dna.html">Mapping Aesthetic DNA</a>
+              <a href="pinterest-case-study.html">Pinterest Case Study</a>
+            </div>
+            <a href="../about.html">About</a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="site-main">
+        <div class="section-label">Notes</div>
+        
+        <article class="essay-body">
+          {{content}}
+        </article>
+      </main>
+
+      <div class="site-sidebar-bottom">
+        <div class="footer-copyright">Alice Chang &copy; 2025</div>
+        <div class="footer-quote">The medium is the message.</div>
+      </div>
+    </div>
+    
+    <script>
+      // Highlight active spine link based on current URL
+      document.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname.split('/').pop();
+        const spineLinks = document.querySelectorAll('.spine-list a');
+        spineLinks.forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
