@@ -554,13 +554,20 @@ hr::after {
   list-style: none; /* Custom bullets */
 }
 
+.essay-body ol {
+  padding-left: 20px;
+  margin-bottom: 24px;
+  /* Keep default decimal list-style */
+}
+
 .essay-body li {
   margin-bottom: 12px;
   position: relative;
   padding-left: 8px;
 }
 
-.essay-body li::before {
+/* Only add the em-dash for unordered lists */
+.essay-body ul li::before {
   content: "—";
   position: absolute;
   left: -20px;
