@@ -29,14 +29,22 @@
         throw new Error('Missing containers');
       }
 
-      // Swap content immediately (no fade to avoid flicker)
-      currentMain.innerHTML = newMain.innerHTML;
-      document.title = doc.title;
+      // Fade out current main content
+      currentMain.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      currentMain.style.opacity = '0';
+      currentMain.style.transform = 'translateY(5px)';
 
-      const filename = href.split('/').pop();
-      updateActiveLinks(filename);
+      setTimeout(() => {
+        currentMain.innerHTML = newMain.innerHTML;
+        document.title = doc.title;
 
-      window.scrollTo({ top: 0, behavior: 'instant' });
+        const filename = href.split('/').pop();
+        updateActiveLinks(filename);
+
+        currentMain.style.opacity = '1';
+        currentMain.style.transform = 'translateY(0)';
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }, 200);
 
       if (pushState) {
         history.pushState({ href }, '', href);
