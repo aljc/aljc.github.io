@@ -2,7 +2,7 @@
 
 # An Interesting Pinterest Case Study
 
-*(Note: The following is loosely adapted from a talk I gave at VentureBeat: Transform 2024.)*
+*(The following is loosely adapted from a talk I gave at VentureBeat: Transform 2024.)*
 
 <span class="dropcap">O</span>ne of the thorniest problems we encountered at Pinterest was a gap between language and taste. People often know what they like when they see it, but can't quite put the right words to it. Someone might have a board full of concrete, warm minimalism, but when asked to search for it, they just type something broad like "living room".
 
@@ -14,9 +14,9 @@ Consider a user with a home decor board that has a clear visual theme - clean li
 
 Without the words, they can't articulate what they're looking for, and they can't search for more of it.
 
-It was winter 2023 and GPT-3.5 had come out a few months prior (we were still pre GPT-4). I started wondering whether we could bridge this by combining Pinterest's visual search and taste graph with LLMs to generate these descriptors automatically, essentially giving users a language for their own aesthetic. We formed a small tiger team to explore the idea.
+It was winter 2023 and GPT-3.5 had come out a few months prior (we were still pre GPT-4). I started wondering whether we could bridge this by combining Pinterest's visual search and taste graph with LLMs to generate these descriptors automatically, essentially giving users a language for their own aesthetic. I formed a small tiger team to explore the idea.
 
-## Prompt → Product
+## Prompt to Product
 
 Our early prompting and prototype loop looked something like this:
 
