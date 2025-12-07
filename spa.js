@@ -30,9 +30,9 @@
       }
 
       // Fade out current main content
-      currentMain.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      currentMain.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
       currentMain.style.opacity = '0';
-      currentMain.style.transform = 'translateY(5px)';
+      currentMain.style.transform = 'translateY(10px)';
 
       setTimeout(() => {
         currentMain.innerHTML = newMain.innerHTML;
@@ -44,7 +44,7 @@
         currentMain.style.opacity = '1';
         currentMain.style.transform = 'translateY(0)';
         window.scrollTo({ top: 0, behavior: 'instant' });
-      }, 200);
+      }, 300);
 
       if (pushState) {
         history.pushState({ href }, '', href);
