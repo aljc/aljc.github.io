@@ -24,7 +24,7 @@
       <aside class="site-sidebar">
         <div class="site-sidebar-top">
           <div class="site-title-wrap">
-            <a href="../about.html" style="text-decoration: none; color: inherit;">
+            <a href="/about.html" style="text-decoration: none; color: inherit;">
               <div class="site-title">Alice Chang</div>
             </a>
           </div>
@@ -32,13 +32,13 @@
             Musings on technology, craft, and creativity.
           </p>
           <nav class="site-nav">
-            <a href="../index.html" class="active">Notes</a>
+            <a href="/index.html" class="active">Notes</a>
             <div class="spine-list">
-              <a href="thinking-with-machines.html">On Thinking With Machines</a>
-              <a href="aesthetic-dna.html">Mapping Aesthetic DNA</a>
-              <a href="pinterest-case-study.html">An Interesting Pinterest Case Study</a>
+              <a href="/notes/thinking-with-machines.html">On Thinking With Machines</a>
+              <a href="/notes/aesthetic-dna.html">Mapping Aesthetic DNA</a>
+              <a href="/notes/pinterest-case-study.html">An Interesting Pinterest Case Study</a>
             </div>
-            <a href="../about.html">About</a>
+            <a href="/about.html">About</a>
           </nav>
         </div>
       </aside>
@@ -108,18 +108,7 @@
       </div>
     </div>
     
-    <script>
-      // Highlight active spine link based on current URL
-      document.addEventListener('DOMContentLoaded', () => {
-        const currentPath = window.location.pathname.split('/').pop();
-        const spineLinks = document.querySelectorAll('.spine-list a');
-        spineLinks.forEach(link => {
-          if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-          }
-        });
-      });
-    </script>
+    <script src="../spa.js"></script>
   </body>
 </html>
 
