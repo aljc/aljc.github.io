@@ -1,6 +1,6 @@
 <div class="note-meta">July 11, 2024</div>
 
-# Case Study: Pinterest Personalized Style Insights
+# Case Study: Pinterest Style Insights
 
 <span class="dropcap">O</span>ne of the thorniest problems we encountered at Pinterest was a gap between language and taste. People often know what they like when they see it, but can't quite put the right words to it. Someone might have a board full of concrete, warm minimalism, but when asked to search for it, they just type something broad like "living room".
 
