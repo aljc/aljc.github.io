@@ -6,7 +6,7 @@
 
 <span class="dropcap">O</span>ne of the thorniest problems we encountered at Pinterest was a gap between language and taste. People often know what they like when they see it, but can't quite put the right words to it. Someone might have a board full of concrete, warm minimalism, but when asked to search for it, they just type something broad like "living room".
 
-<img src="../assets/pinterest-board-example.png" alt="Pinterest Board Example" style="width: 100%; border-radius: 8px; margin: 32px 0;">
+<img src="../assets/pinterest-board-example.png" alt="Pinterest Board Example" style="width: 90%; border-radius: 8px; margin: 32px auto; display: block;">
 
 ## The Problem
 
