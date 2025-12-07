@@ -6,6 +6,8 @@
 
 <span class="dropcap">O</span>ne of the thorniest problems we encountered at Pinterest was a gap between language and taste. People often know what they like when they see it, but can't quite put the right words to it. Someone might have a board full of concrete, warm minimalism, but when asked to search for it, they just type something broad like "living room".
 
+<img src="../assets/pinterest-board-example.png" alt="Pinterest Board Example" style="width: 100%; border-radius: 4px; margin: 32px 0;">
+
 ## The Problem
 
 Consider a user with a home decor board that has a clear visual theme - clean lines, natural materials, exposed textures. They know they like it, but they don't know the terms (like "Japandi" or "Industrial modern") to describe it.
