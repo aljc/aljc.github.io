@@ -14,7 +14,7 @@ Without the words, they can't articulate what they're looking for, and they can'
 
 It was winter 2023 and GPT-3.5 had come out a few months prior (we were still pre GPT-4). I started wondering whether we could bridge this by combining Pinterest's visual search and taste graph with LLMs to generate these descriptors automatically, essentially giving users a language for their own aesthetic. We formed a small tiger team to explore the idea.
 
-## From Prompt to Product
+## Prompt → Product
 
 Our early prompting and prototype loop looked something like this:
 
@@ -22,7 +22,7 @@ Our early prompting and prototype loop looked something like this:
 2.  **Guardrails**: We iterated on the early prompt several times, adding guardrails and a defined JSON schema so we could work with the output programmatically.
 3.  **Prototype**: We wrapped the JSON outputs in a lightweight UI and tested the flow on real user boards in a live sandbox environment.
 
-This loop allowed us to test and pivot the idea repeatedly in a matter of days, rather than weeks.
+This loop allowed us to test and pivot the idea repeatedly in a matter of days, rather than weeks. (The final production buildout took approximately two additional months.)
 
 ## Product and Research
 
@@ -33,7 +33,7 @@ Not only did this allow us to unlock unprecedented product development speed; we
 
 Running these tracks in tandem let us to ship value and gather user data *while* deeper research was underway. The product scaffolding gave us a place to plug in new models as they matured, and the user data in turn shaped the research roadmap. It became a single loop rather than two disconnected efforts.
 
-## The Result
+## Et voilà!
 
 <video autoplay loop muted playsinline style="max-width: 300px; width: 30%; border-radius: 4px; float: left; margin: 0 24px 24px 0;">
   <source src="../assets/style-insights-demo.mp4" type="video/mp4">
