@@ -1,6 +1,6 @@
 <div class="note-meta">July 11, 2024</div>
 
-# Case Study: Pinterest Style Insights
+# An Interesting Pinterest Case Study
 
 <span class="dropcap">O</span>ne of the thorniest problems we encountered at Pinterest was a gap between language and taste. People often know what they like when they see it, but can't quite put the right words to it. Someone might have a board full of concrete, warm minimalism, but when asked to search for it, they just type something broad like "living room".
 
@@ -35,7 +35,10 @@ Running these tracks in tandem let us to ship value and gather user data *while*
 
 ## The Result
 
-<img src="../assets/style-insights-demo.gif" alt="Personalized Style Insights Demo" style="max-width: 350px; width: 30%; border-radius: 4px; float: left; margin: 0 24px 24px 0;">
+<video autoplay loop muted playsinline style="max-width: 300px; width: 30%; border-radius: 4px; float: left; margin: 0 24px 24px 0;">
+  <source src="../assets/style-insights-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 The final experience was an immersive, personalized style-insights page for every user. It quickly became a top-performing notification. But for me, the lasting takeaway was the working model: product and research moving at different speeds but along a shared loop. It’s a pattern I’ve continued to use in early-stage AI product discovery.
 
