@@ -67,14 +67,25 @@
           const text = await response.text();
           const contentDiv = document.getElementById('essay-content');
           
-          contentDiv.innerHTML = marked.parse(text);
-          
-          // Update page title based on the first h1
-          const h1 = contentDiv.querySelector('h1');
-          if (h1) {
-            document.title = `${h1.innerText} – Alice Chang`;
-          }
+          // Soft fade transition
+          contentDiv.style.opacity = '0';
+          contentDiv.style.transform = 'translateY(10px)';
+          contentDiv.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
 
+          setTimeout(() => {
+            contentDiv.innerHTML = marked.parse(text);
+            
+            // Update page title based on the first h1
+            const h1 = contentDiv.querySelector('h1');
+            if (h1) {
+              document.title = `${h1.innerText} – Alice Chang`;
+            }
+
+            // Fade back in
+            contentDiv.style.opacity = '1';
+            contentDiv.style.transform = 'translateY(0)';
+          }, 300);
+          
           // 3. Update sidebar active state
           updateActiveSpine(slug);
           

@@ -18,6 +18,11 @@
   --sidebar-width: 260px;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 *,
 *::before,
 *::after {
@@ -234,6 +239,7 @@ body {
   grid-row: 1;
   padding: 60px 60px;
   max-width: 800px; /* Optimal reading width */
+  animation: fadeIn 0.5s ease-out;
 }
 
 .section-label {
