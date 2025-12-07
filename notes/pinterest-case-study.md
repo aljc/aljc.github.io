@@ -42,6 +42,6 @@ Running these tracks in tandem let us to ship value and gather user data *while*
   Your browser does not support the video tag.
 </video>
 
-The final experience was an immersive, personalized style-insights page for every user. It quickly became a top-performing notification. But for me, the lasting takeaway was the working model: product and research moving at different speeds but along a shared loop. It’s a pattern I’ve continued to use in early-stage AI product discovery.
+The final experience was an immersive, personalized style-insights page for every user. It quickly became a top-performing notification. But for me, the lasting takeaway was the working model: product and research moving at different speeds but along a shared loop. It’s an operating pattern I’ve continued to use for early-stage AI product discovery.
 
 <div style="clear: both;"></div>
