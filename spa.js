@@ -1,22 +1,45 @@
 (() => {
   const mainSelector = '.site-main';
 
-  const isExternal = (href) =>
-    /^https?:\/\//i.test(href) || href.startsWith('mailto:') || href.startsWith('tel:');
-  const isHash = (href) => href.startsWith('#');
-  const isHtmlLink = (href) => href.endsWith('.html');
+  // Helper to check if a URL is local to this site
+  const isLocal = (url) => {
+    return url.origin === window.location.origin;
+  };
 
-  const updateActiveLinks = (filename) => {
+  const isHtmlLink = (url) => {
+    // Allow .html files or root path (which serves index.html)
+    return url.pathname.endsWith('.html') || url.pathname.endsWith('/');
+  };
+
+  const updateActiveLinks = (path) => {
     const links = document.querySelectorAll('.site-nav a, .spine-list a');
     links.forEach((link) => {
-      const linkFile = (link.getAttribute('href') || '').split('/').pop();
-      link.classList.toggle('active', linkFile === filename);
+      // Use pathname comparison for robustness
+      try {
+        const linkUrl = new URL(link.href);
+        const linkPath = linkUrl.pathname;
+        
+        // Normalize paths for comparison (handle / vs /index.html)
+        const normalize = (p) => p.endsWith('/') ? p + 'index.html' : p;
+        const currentPath = normalize(path.startsWith('/') ? path : '/' + path);
+        const targetPath = normalize(linkPath);
+
+        // Simple filename check as fallback/alternative matching style
+        const linkFile = linkPath.split('/').pop();
+        const currentFile = path.split('/').pop();
+
+        // Check for exact match or filename match
+        const isActive = targetPath === currentPath || (linkFile && linkFile === currentFile);
+        link.classList.toggle('active', isActive);
+      } catch (e) {
+        // Ignore invalid links
+      }
     });
   };
 
-  const navigate = async (href, pushState = true) => {
+  const navigate = async (fullUrl, pushState = true) => {
     try {
-      const res = await fetch(href);
+      const res = await fetch(fullUrl);
       if (!res.ok) throw new Error('Fetch failed');
 
       const text = await res.text();
@@ -38,20 +61,42 @@
         currentMain.innerHTML = newMain.innerHTML;
         document.title = doc.title;
 
-        const filename = href.split('/').pop();
-        updateActiveLinks(filename);
+        // Parse the target URL to update links and analytics
+        const urlObj = new URL(fullUrl);
+        updateActiveLinks(urlObj.pathname);
 
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'instant' });
+
+        // Fade in
         currentMain.style.opacity = '1';
         currentMain.style.transform = 'translateY(0)';
-        window.scrollTo({ top: 0, behavior: 'instant' });
+
+        // 1. Update History State
+        // We do this AFTER the title update so that if GA4 automatic tracking is on,
+        // it captures the correct new title instead of the old one.
+        if (pushState) {
+          history.pushState({ href: fullUrl }, '', fullUrl);
+        }
+
+        // 2. Track Pageview Manually
+        // This ensures the view is counted even if automatic history tracking misses it,
+        // and guarantees the correct title/path are sent.
+        // NOTE: For best accuracy (avoiding double counts), disable 
+        // "Page changes based on browser history events" in your GA4 Enhanced Measurement settings.
+        if (typeof gtag === 'function') {
+           gtag('event', 'page_view', {
+             page_title: doc.title,
+             page_location: fullUrl,
+             page_path: urlObj.pathname
+           });
+        }
       }, 300);
 
-      if (pushState) {
-        history.pushState({ href }, '', href);
-      }
     } catch (err) {
-      // Fallback to full navigation if anything fails
-      window.location.href = href;
+      console.error('Navigation error:', err);
+      // Fallback to full navigation
+      window.location.href = fullUrl;
     }
   };
 
@@ -60,25 +105,33 @@
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
 
     const link = e.target.closest('a');
-    if (!link) return;
+    if (!link || !link.href) return;
 
-    const href = link.getAttribute('href');
-    if (!href) return;
+    // Use URL object for robust parsing
+    const url = new URL(link.href);
+
     if (link.target && link.target !== '_self') return;
     if (link.hasAttribute('download')) return;
-    if (isExternal(href) || isHash(href)) return;
-    if (!isHtmlLink(href)) return;
+    if (!isLocal(url)) return; // External link
+    if (url.hash && url.pathname === window.location.pathname) return; // Hash link on same page
+    if (!isHtmlLink(url)) return; // Not an HTML page
 
     e.preventDefault();
-    navigate(href, true);
+    navigate(url.href, true);
   });
 
   window.addEventListener('popstate', (e) => {
-    const href = (e.state && e.state.href) ? e.state.href : window.location.pathname.split('/').pop();
+    // If we have state with href, use it. Otherwise, fallback to current location.
+    // Using window.location.href handles the back button correctly.
+    const href = (e.state && e.state.href) ? e.state.href : window.location.href;
     navigate(href, false);
   });
 
-  // Initial active link highlight
-  updateActiveLinks(window.location.pathname.split('/').pop());
-})();
+  // Initialize: Set the initial state so we can go back to it reliably.
+  if (!history.state) {
+    history.replaceState({ href: window.location.href }, '', window.location.href);
+  }
 
+  // Set active link on load
+  updateActiveLinks(window.location.pathname);
+})();
