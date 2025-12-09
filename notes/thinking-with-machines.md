@@ -12,9 +12,9 @@ Licklider envisioned a partnership where the human and machine worked together, 
 
 In the age of large generative models, that hierarchy has dissolved.
 
-Today, I often find myself in front of a system that possesses knowledge I can’t match - a vast, instant memory of every pattern and architecture. I’m not supervising a subordinate; I’m navigating a dialogue with a system that is often the epistemic engine.
+Today, I often find myself in front of a system that possesses knowledge I can’t match - a vast, instant memory of every pattern and architecture. I’m not supervising a subordinate so much as navigating a dialogue with a system that is, in essence, an epistemic engine.
 
-The collaboration feels less like supervision and more like a Socratic seminar:
+The collaboration feels something like a Socratic seminar:
 
 - The machine offers a confident proposal.
 - I question its assumptions and push back on the complexity.
