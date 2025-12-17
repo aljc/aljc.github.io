@@ -14,7 +14,7 @@ It would be unfair to characterize the machine here as trivial. But the partners
 
 His proposal was founded on the assumptions that: one, reasoning happens upstream of execution, and two, correctness is something the human can comprehensively assess.
 
-In the age of large generative models, those assumptions no longer feels stable.
+In the age of large generative models, those assumptions no longer feel stable.
 
 Today, I often find myself interacting with systems that possess a breadth of knowledge far surpassing my own - ones that are able to recall every fact, pattern, and idea they've absorbed from the entire online world. These systems do not simply act on my instructions. They surface alternatives and challenge my problem exploration and solution definition in ways that are often surprisingly useful.
 
@@ -35,11 +35,11 @@ His concerns reflected the bottlenecks of his era: speed, interactivity, human-c
 
 The pressure points of today feel different.
 
-Modern systems can reason about many possible ideas. They can explore a solution space more broadly and quickly than I can on my own. They can surface alternatives, challenge assumptions, and reframe problems in ways that meaningfully influence the outcome. But they cannot be the ones to decide which direction ultimately becomes real.
+Modern systems can reason about many possible ideas. They can explore a solution space more broadly and quickly than I can on my own. They can surface alternatives and reframe problems in ways that can meaningfully influence the outcome. But they cannot be the ones to decide which direction ultimately becomes real.
 
 At some point, the dialgoue ends.
 
-A system ships. An abstraction hardens into something other people need to work with. A tradeoff hardens into a production constraint. When things go wrong months later, when something fails or a customer complains or a reputational line is breached in a way no benchmark could have anticipated - someone is responsible.
+A system ships. An abstraction hardens into something other people need to work with. A tradeoff hardens into a production constraint. When things go wrong months later, when something fails or a customer complains or a reputational line is breached in a way no benchmark could have predicted - the human is responsible.
 
 The asymmetry of intelligence becomes an asymmetry of responsibility.
 
@@ -47,14 +47,14 @@ The asymmetry of intelligence becomes an asymmetry of responsibility.
 
 What does it mean to take this new form of symbiosis seriously?
 
-If the human is no longer the sole source of understanding, and the machine is no longer the passive executor, then our tools and mental models need to evolve to reflect that. The work is no longer about issuing instructions or evaluating outputs. It's about engaging in productive dialogue, supplying context, and knowing when exploration should stop.
+If the human is no longer the sole source of mastery, and the machine is no longer the passive executor, then our tools and mental models need to evolve to reflect that. Our task no longer only involves issuing instructions or evaluating outputs. It now includes engaging in productive dialogue, supplying context, and deciding when exploration should stop.
 
 As execution and low-level reasoning become cheaper, more of the burden shifts upward. Less effort goes into specifying low-leval semantics and more into framing problems, defining constraints, and deciding what really matters.
 
-This changes what competence looks like. It feels less like mastery in the narrow sense and more about an ability to articulate intent, interrogate suggestions, and synthesize competing possibilities into coherent judgment.
+This will change what competence looks like. It will feel less like factual expertise in the narrow sense and more about an ability to articulate intent, interrogate suggestions, and synthesize competing possibilities into coherent judgment.
 
-Ultimately, this means competence is defined by those who are good at thinking with systems - not commanding them - while remaining accountable for its outcomes.
+Ultimately, this means competence is defined by those who are good at thinking with systems - not just commanding them - while remaining accountable for their outcomes.
 
-Licklider imagined a symbiotic world that one-directional and grounded in hierarchy: humans understood the problem, machines carried out the work. The world is emerging now is more fluid, more disorienting, and in some ways more demanding.
+Licklider imagined a symbiotic world that was one-directional and grounded in hierarchy: humans understood the problem, machines carried out the work. The world is emerging now is more fluid and disorienting, and in many ways more demanding.
 
-We are not just supervising our tools. We are learning to think alongside them while bearing responsibility for what that reasoning becomes.
+We are not just supervising our tools. We are learning to think alongside them while bearing responsibility for what becomes of that thinking.
