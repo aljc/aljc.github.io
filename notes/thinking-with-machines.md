@@ -55,6 +55,6 @@ This will change what competence looks like. It will feel less like factual expe
 
 Ultimately, this means competence is defined by those who are good at thinking with systems - not just commanding them - while remaining accountable for their outcomes.
 
-Licklider imagined a symbiotic world that was one-directional and grounded in hierarchy: humans understood the problem, machines carried out the work. The world is emerging now is more fluid and disorienting, and in many ways more demanding.
+Licklider imagined a symbiotic world that was one-directional and grounded in hierarchy: humans understood the problem, machines carried out the work. The world that is emerging now is more fluid and disorienting, and in many ways more demanding.
 
 We are not just supervising our tools. We are learning to think alongside them while bearing responsibility for what becomes of that thinking.
