@@ -31,7 +31,7 @@ This loop allowed us to test and pivot the idea repeatedly in a matter of days, 
 Not only did this allow us to unlock unprecedented product development speed; we were also able to pilot a new operating model between product and research. We ran two parallel tracks:
 
 1.  **Product**: Bootstrap with commercial LLMs to test and validate the user problem quickly.
-2.  **Research**: In parallel, invest in longer-horizon modeling innovations – in our case, <a href="https://www.pinterestcareers.com/media/eoqd5wcs/pinclip.pdf" target="_blank" rel="noopener noreferrer">PinCLIP</a> (Pinterest-specific foundational multimodal & cross-modal CLIP), <a href="https://medium.com/pinterest-engineering/building-pinterest-canvas-a-text-to-image-foundation-model-aa34965e84d9" target="_blank" rel="noopener noreferrer">Pinterest Canvas</a> (text-to-image foundation model), and embedding work.
+2.  **Research**: In parallel, invest in longer-horizon modeling innovations – in our case, <a href="https://www.pinterestcareers.com/media/eoqd5wcs/pinclip.pdf" target="_blank" rel="noopener noreferrer">PinCLIP</a> (a CLIP-style model trained on Pinterest data), <a href="https://medium.com/pinterest-engineering/building-pinterest-canvas-a-text-to-image-foundation-model-aa34965e84d9" target="_blank" rel="noopener noreferrer">Pinterest Canvas</a> (a text-to-image foundation model), and embedding work.
 
 Running these tracks in tandem let us to ship value and gather user data *while* deeper research was underway. The product scaffolding gave us a place to plug in new models as they matured, and the user data in turn shaped the research roadmap. It became a single loop rather than two disconnected efforts.
 

@@ -4,47 +4,57 @@
 
 <span class="dropcap">I</span>’ve spent the last week in Paris, reading Sartre in the evenings and tinkering with a few side projects during the day. I didn't intend for the two activities to intersect, but at some point, the combination of distance, philosophy, and practical engineering began informing the same core question: What does it mean to be responsible for the creation of software today?
 
-## When the Hierarchy Breaks
+## When the Hierarchy Shifts
 
 For a long time, the ideal for technology was captured by J.C.R. Licklider’s 1960 vision of Man–Computer Symbiosis.
 
-Licklider envisioned a partnership where the human and machine worked together, but the roles were strictly defined and asymmetrical. The human was the unquestioned expert - the one to set the goals, frame the problems, and judge the correctness. The machine was the tireless executor, handling the tedious, routine, clerical work. The underlying structure of his proposal required the computer to be subordinate to the human's superior knowledge.
+Licklider envisioned a partnership where the human and machine worked together, yet their roles were strictly defined and asymmetrical. The human was the unquestioned expert, responsible for setting goals, framing problems, and evaluating  responses. The machine was the executor, carrying out routine actions that could be fully specified in advance. Humans reasoned; machines assisted and acceleated.
 
-In the age of large generative models, that hierarchy has dissolved.
+It would be unfair to characterize the machine here as trivial. But the partnership still relied on a stable hierarchy of expertise. The human entered the interaction already knowing the contours of the problem and how to recognize a correct solution.
 
-Today, I often find myself in front of a system that possesses knowledge I can’t match - a vast, instant memory of every pattern and architecture. I’m not supervising a subordinate so much as navigating a dialogue with a system that is, in essence, an epistemic engine.
+His proposal was founded on the assumptions that: one, reasoning happens upstream of execution, and two, correctness is something the human can comprehensively assess.
 
-The collaboration feels something like a Socratic seminar:
+In the age of large generative models, those assumptions no longer feels stable.
 
-- The machine offers a confident proposal.
-- I question its assumptions and push back on the complexity.
-- The machine revises, focusing the solution.
-- I narrow the constraints, imposing my taste and context.
+Today, I often find myself interacting with systems that possess a breadth of knowledge far surpassing my own - ones that are able to recall every fact, pattern, and idea they've absorbed from the entire online world. These systems do not simply act on my instructions. They surface alternatives and challenge my problem exploration and solution definition in ways that are often surprisingly useful.
 
-The expertise is no longer housed in either of us. It emerges between us, in the back-and-forth of the dialogue. What we have is a system where each side continuously destabilizes and improves the other.
+The interaction feels less like strict supervision and more like a Socratic dialogue:
+- I ask a question
+- The system responds with a proposal
+- I interrogate its assumptions, add context, and push back
+- It surfaces alternatives I did not originally consider
+- We collaboratively revise the solution
+
+Expertise is no longer housed in either of us. It emerges through the back and forth of our dialogue itself. Each side continuously destabilizes, productively challenges, and sharpens the other.
 
 ## The Friction of Value
 
-The central difficulty of modern engineering is no longer acquiring technical knowledge. AI provides that breadth. The true scarcity is the human capacity to define and enforce value.
+What's striking in hindsight is that Licklider was largely right about the shape of the relationship, but wrong about where the pressure would eventually accumulate.
 
-AI is excellent at optimizing for technical metrics: speed, conciseness, or adherence to a defined pattern. But it is value-neutral. It has no concept of what is good for your team, your business, or your long-term maintainability. It doesn't know the unwritten rules of the world the code must inhabit.
+His concerns reflected the bottlenecks of his era: speed, interactivity, human-computer bandwidth. The challenge was how quickly and fluidly a human could communicate intent to a machine that was fundamentally limited.
 
-The most profound work AI forces upon us is engaging with this friction of value:
+The pressure points of today feel different.
 
-- AI can give me a dozen architectural options. I have to choose the one that aligns with my budget, my team’s skill level, and my company’s appetite for risk. I provide the judgment.
-- AI can write code that is technically flawless. I have to ensure the abstraction is readable and aesthetically pleasing to the humans who will maintain it for the next five years. I provide the taste.
-- AI will simply reflect its training data. I have to push back to ensure the system is aligned with ethical standards and legal constraints. I provide the accountability.
+Modern systems can reason about many possible ideas. They can explore a solution space more broadly and quickly than I can on my own. They can surface alternatives, challenge assumptions, and reframe problems in ways that meaningfully influence the outcome. But they cannot be the ones to decide which direction ultimately becomes real.
+
+At some point, the dialgoue ends.
+
+A system ships. An abstraction hardens into something other people need to work with. A tradeoff hardens into a production constraint. When things go wrong months later, when something fails or a customer complains or a reputational line is breached in a way no benchmark could have anticipated - someone is responsible.
+
+The asymmetry of intelligence becomes an asymmetry of responsibility.
 
 ## On Thinking with Machines
 
-What should our systems look like if we take this new form of symbiosis seriously?
+What does it mean to take this new form of symbiosis seriously?
 
-If the human is no longer the sole expert, and the machine is no longer the mere executor, then developer tools should stop framing themselves around mastery and start framing themselves around dialogue.
+If the human is no longer the sole source of understanding, and the machine is no longer the passive executor, then our tools and mental models need to evolve to reflect that. The work is no longer about issuing instructions or evaluating outputs. It's about engaging in productive dialogue, supplying context, and knowing when exploration should stop.
 
-The future of engineering will not belong to the top 10 percent of developers in the old sense. It will belong to people who can articulate intent, who can interrogate the machine’s suggestions, who can synthesize competing possibilities into coherent judgment.
+As execution and low-level reasoning become cheaper, more of the burden shifts upward. Less effort goes into specifying low-leval semantics and more into framing problems, defining constraints, and deciding what really matters.
 
-Ultimately, this means competence is defined by those who are good at thinking with systems, not commanding them.
+This changes what competence looks like. It feels less like mastery in the narrow sense and more about an ability to articulate intent, interrogate suggestions, and synthesize competing possibilities into coherent judgment.
 
-Licklider dreamed of a symbiotic world that was deferential and one-directional, one where humans decide, machines execute. The one that is emerging now is more fluid, more disorienting, and far more demanding.
+Ultimately, this means competence is defined by those who are good at thinking with systems - not commanding them - while remaining accountable for its outcomes.
 
-We are not just supervising our tools. We are learning to think alongside them.
+Licklider imagined a symbiotic world that one-directional and grounded in hierarchy: humans understood the problem, machines carried out the work. The world is emerging now is more fluid, more disorienting, and in some ways more demanding.
+
+We are not just supervising our tools. We are learning to think alongside them while bearing responsibility for what that reasoning becomes.
