@@ -39,7 +39,7 @@ Modern systems can reason about many possible ideas. They can explore a solution
 
 At some point, the dialgoue ends.
 
-A system ships. An abstraction hardens into something other people need to work with. A tradeoff hardens into a production constraint. When things go wrong months later, when something fails or a customer complains or a reputational line is breached in a way no benchmark could have predicted - the human is responsible.
+A system ships. An abstraction becomes something other people need to work with. A tradeoff hardens into a production constraint. When things go wrong months later, when something fails or a customer complains or a reputational line is breached in a way no benchmark could have predicted - the human is responsible.
 
 The asymmetry of intelligence becomes an asymmetry of responsibility.
 
